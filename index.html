@@ -68,7 +68,21 @@
             let filterValue = document.getElementById('filterInput').value.toUpperCase();
             console.log(filterValue);
             // obtenir les noms de la liste
-            let names = document.getElementById('names');
+            let ul = document.getElementById('names');
+            // obtenir les li de l'ul
+            let li = ul.querySelectorAll('li.collection-item');
+            // parcourir la liste collection-item
+            for (let i = 0; i < li.length; i++) {
+                // obtenir tous les liens
+                let a = li[i].getElementsByTagName('a')[0];
+                //  si ça match
+                if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+
         }
     </script>
 </body>
