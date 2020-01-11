@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <title>My Contacts</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="center-align">
+            My Contacts
+        </h1>
+
+        <input type="text" id="filterInput" placeholder="Search name...">
+        <ul id="names" class="collection with-header">
+            <li class="colection-header">
+                <h5>A</h5>
+            </li>
+            <li class="collection-item">
+                <a href="">Abel</a>
+            </li>
+            <li class="collection-item">
+                <a href="">Alfred</a>
+            </li>
+            <li class="collection-item">
+                <a href="">Alain</a>
+            </li>
+            <li class="collection-item">
+                <a href="">Anne</a>
+            </li>
+            <li class="colection-header">
+                <h5>B</h5>
+            </li>
+            <li class="collection-item">
+                <a href="">Brad</a>
+            </li>
+            <li class="collection-item">
+                <a href="">Billy</a>
+            </li>
+            <li class="collection-item">
+                <a href="">Bob</a>
+            </li>
+            <li class="collection-item">
+                <a href="">Ben</a>
+            </li>
+            <li class="colection-header">
+                <h5>C</h5>
+            </li>
+            <li class="collection-item">
+                <a href="">Cyril</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        // cibler l'input
+        let filterInput = document.getElementById('filterInput');
+        // ajouter un écouteur d'evenement
+        filterInput.addEventListener('keyup', filterNames);
+
+        function filterNames() {
+            //obtenir la valeur de l'input
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+            console.log(filterValue);
+            // obtenir les noms de la liste
+            let names = document.getElementById('names');
+        }
+    </script>
+</body>
+
+</html>
